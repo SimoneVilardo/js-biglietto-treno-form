@@ -14,12 +14,13 @@ gen_button.addEventListener('click', function(){
 
     let fascia_eta = document.getElementById('eta').value;
     console.log(fascia_eta)
-
+// VARIABILE CARROZZA
     let carrozza = Math.floor(Math.random() * 10 + 1)
 
+    // VARIABILE CODICE POSTALE
     let codice_cp = Math.floor(Math.random() * 100000 + 1)
 
-
+// SCONTO MINORE
     if (fascia_eta == 'Minorenne') {
 
         let prezzo = (percorso_utente * costo_base * 0.8);
@@ -31,6 +32,7 @@ gen_button.addEventListener('click', function(){
         document.getElementById('codice_cp').innerHTML = `${codice_cp}`
         document.getElementById('costo-biglietto').innerHTML = `${prezzo.toFixed(2)}€`
 
+// SCONTO OVER 65        
     } else if (fascia_eta == 'Over65') {
 
         let prezzo = (percorso_utente * costo_base * 0.4);
@@ -41,6 +43,7 @@ gen_button.addEventListener('click', function(){
         document.getElementById('codice_cp').innerHTML = `${codice_cp}`
         document.getElementById('costo-biglietto').innerHTML = `${prezzo.toFixed(2)}€`
 
+// PREZZO STANDARD        
     } else (fascia_eta == 'Maggiorenne') ;{
 
         let prezzo = (percorso_utente * costo_base);
