@@ -23,4 +23,6 @@ MILESTONE 1
 
 9.creare un bottone che ti permetta di generare i dati
 
-MILESTONE 2  
+MILESTONE 2 
+
+1.Far visualizzare in pagina il risultato all'utente

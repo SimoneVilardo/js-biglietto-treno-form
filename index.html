@@ -22,14 +22,40 @@
                                 <input type="text" class="form-control" id="nome" placeholder="Inserisci Nome e Cognome">
                                 <input type="text" class="form-control" id="percorso" placeholder="Inserisci km">
                                 <select name="fascia-eta" id="eta">
-                                    <option value="">Minorenne</option>
-                                    <option value="">Maggiorenne</option>
-                                    <option value="">Over 65</option>
+                                    <option>minorenne</option>
+                                    <option value="maggiorenne">Maggiorenne</option>
+                                    <option value="over65">Over 65</option>
                                 </select>
                                 <button type="button" class="btn btn-primary mb-3" id="genera">Genera</button>
-                                <button type="button" class="btn btn-primary mb-3" id="annulla">Annulla</button>
+                                <button type="reset" class="btn btn-primary mb-3" id="annulla">Annulla</button>
                             </div>
                         </form>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Nome Passeggero</th>
+                                            <th scope="col">Offerta</th>
+                                            <th scope="col">Carrozza</th>
+                                            <th scope="col">Codice CP</th>
+                                            <th scope="col">Costo Biglietto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th id="nome-passeggero" scope="row"></th>
+                                            <td id="offerta"></td>
+                                            <td id="carrozza"></td>
+                                            <td id="codice_cp"></td>
+                                            <td id="costo-biglietto"></td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
