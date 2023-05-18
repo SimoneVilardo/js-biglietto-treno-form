@@ -14,30 +14,40 @@
     </head>
     <body>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
+            <div class="row bg-danger">
+                <div class="col-8 offset-2">
+                    <h2 class="text-center py-5 text-white fw-bold">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
                     <div class="container-fluid">
-                        <form class="row g-3">
-                            <div class="col-12">
+                        <form class="row bg-white px-3 py-2 g-3">
+                            <div class="col-12 text-danger d-flex justify-content-between">
+                                <h5 class="fw-bold">Nome Cognome</h5>
+                                <h5 class="fw-bold">Km da percorrere</h5>
+                                <h5 class="fw-bold">Fascia d'età</h5>
+                            </div>
+                            <div class="col-12 py-2 d-flex justify-content-center">
                                 <input type="text" class="form-control" id="nome" placeholder="Inserisci Nome e Cognome">
                                 <input type="text" class="form-control" id="percorso" placeholder="Inserisci km">
-                                <select name="fascia-eta" id="eta">
-                                    <option>minorenne</option>
-                                    <option value="maggiorenne">Maggiorenne</option>
-                                    <option value="over65">Over 65</option>
+                                <select class="mod-select" name="fascia-eta" id="eta">
+                                    <option value="Minorenne">Minorenne</option>
+                                    <option value="Maggiorenne">Maggiorenne</option>
+                                    <option value="Over65">Over 65</option>
                                 </select>
-                                <button type="button" class="btn btn-primary mb-3" id="genera">Genera</button>
-                                <button type="reset" class="btn btn-primary mb-3" id="annulla">Annulla</button>
+                            </div>
+                            <div class="col-12 py-3 d-flex justify-content-center ">
+                                <button type="button" class="bg-danger border-danger m-button btn btn-primary mb-3" id="genera">Genera</button>
+                                <button type="reset" class="bg-danger border-danger btn btn-primary mb-3" id="annulla">Annulla</button>
                             </div>
                         </form>
                     </div>
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12">
+                        <div class="row p-bottom">
+                            <h2 class="text-center py-3 text-white fw-bold">IL TUO BIGLIETTO</h2>
+                            <div class="col-12 bg-white">
+                                <h5 class="fw-bold">DETTAGLIO PASSEGGERO</h5>
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Nome Passeggero</th>
+                                            <th class="bg-danger" scope="col">Nome Passeggero</th>
                                             <th scope="col">Offerta</th>
                                             <th scope="col">Carrozza</th>
                                             <th scope="col">Codice CP</th>
@@ -46,7 +56,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th id="nome-passeggero" scope="row"></th>
+                                            <th class="bg-danger text-capitalize" id="nome-passeggero" scope="row"></th>
                                             <td id="offerta"></td>
                                             <td id="carrozza"></td>
                                             <td id="codice_cp"></td>

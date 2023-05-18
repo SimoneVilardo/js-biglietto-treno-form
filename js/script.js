@@ -20,7 +20,7 @@ gen_button.addEventListener('click', function(){
     let codice_cp = Math.floor(Math.random() * 100000 + 1)
 
 
-    if (fascia_eta == 'minorenne') {
+    if (fascia_eta == 'Minorenne') {
 
         let prezzo = (percorso_utente * costo_base * 0.8);
         console.log(prezzo)
@@ -31,7 +31,7 @@ gen_button.addEventListener('click', function(){
         document.getElementById('codice_cp').innerHTML = `${codice_cp}`
         document.getElementById('costo-biglietto').innerHTML = `${prezzo.toFixed(2)}€`
 
-    } else if (fascia_eta == 'over65') {
+    } else if (fascia_eta == 'Over65') {
 
         let prezzo = (percorso_utente * costo_base * 0.4);
 
@@ -41,7 +41,7 @@ gen_button.addEventListener('click', function(){
         document.getElementById('codice_cp').innerHTML = `${codice_cp}`
         document.getElementById('costo-biglietto').innerHTML = `${prezzo.toFixed(2)}€`
 
-    } else (fascia_eta == 'maggiorenne') ;{
+    } else (fascia_eta == 'Maggiorenne') ;{
 
         let prezzo = (percorso_utente * costo_base);
 
