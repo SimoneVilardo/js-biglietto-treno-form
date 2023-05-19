@@ -12,44 +12,34 @@ gen_button.addEventListener('click', function(){
 
     let fascia_eta = document.getElementById('eta').value;
 // VARIABILE CARROZZA
-    let carrozza = Math.floor(Math.random() * 10 + 1)
+    let carrozza = Math.floor(Math.random() * 10 + 1);
 
     // VARIABILE CODICE POSTALE
-    let codice_cp = Math.floor(Math.random() * 100000 + 1)
+    let codice_cp = Math.floor(Math.random() * 100000 + 1);
+
+    let prezzo = (percorso_utente * costo_base);
 
 // SCONTO MINORE
     if (fascia_eta === 'Minorenne') {
 
-        let prezzo = (percorso_utente * costo_base * 0.8);
-        
-        document.getElementById('nome-passeggero').innerHTML = `${nome_cognome}`
-        document.getElementById('offerta').innerHTML = `${fascia_eta}`
-        document.getElementById('carrozza').innerHTML = `${carrozza}`
-        document.getElementById('codice_cp').innerHTML = `${codice_cp}`
-        document.getElementById('costo-biglietto').innerHTML = `${prezzo.toFixed(2)}€`
+        prezzo *= 0.8;
 
 // SCONTO OVER 65        
     } else if (fascia_eta === 'Over65') {
 
-        let prezzo = (percorso_utente * costo_base * 0.6);
-
-        document.getElementById('nome-passeggero').innerHTML = `${nome_cognome}`
-        document.getElementById('offerta').innerHTML = `${fascia_eta}`
-        document.getElementById('carrozza').innerHTML = `${carrozza}`
-        document.getElementById('codice_cp').innerHTML = `${codice_cp}`
-        document.getElementById('costo-biglietto').innerHTML = `${prezzo.toFixed(2)}€`
+        prezzo *= 0.6;
 
 // PREZZO STANDARD        
     } else (fascia_eta === 'Maggiorenne') ;{
 
-        let prezzo = (percorso_utente * costo_base);
-
-        document.getElementById('nome-passeggero').innerHTML = `${nome_cognome}`
-        document.getElementById('offerta').innerHTML = `${fascia_eta}`
-        document.getElementById('carrozza').innerHTML = `${carrozza}`
-        document.getElementById('codice_cp').innerHTML = `${codice_cp}`
-        document.getElementById('costo-biglietto').innerHTML = `${prezzo.toFixed(2)}€`
+        prezzo
 
     }
+
+    document.getElementById('nome-passeggero').innerHTML = `${nome_cognome}`
+    document.getElementById('offerta').innerHTML = `${fascia_eta}`
+    document.getElementById('carrozza').innerHTML = `${carrozza}`
+    document.getElementById('codice_cp').innerHTML = `${codice_cp}`
+    document.getElementById('costo-biglietto').innerHTML = `${prezzo.toFixed(2)}€`
 
 })
