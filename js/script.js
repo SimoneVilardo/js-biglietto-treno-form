@@ -31,7 +31,7 @@ gen_button.addEventListener('click', function(){
 // SCONTO OVER 65        
     } else if (fascia_eta === 'Over65') {
 
-        let prezzo = (percorso_utente * costo_base * 0.4);
+        let prezzo = (percorso_utente * costo_base * 0.6);
 
         document.getElementById('nome-passeggero').innerHTML = `${nome_cognome}`
         document.getElementById('offerta').innerHTML = `${fascia_eta}`
